@@ -30,7 +30,7 @@ public class Class {
                 if (!input.isEmpty()) {
                     mint = Integer.parseInt(input);
                 }
-                System.out.println("input : " + StringUtils.getmonthName(mint));
+                System.out.println("input : " + StringUtils.getMonthName(mint));
             }
 
             System.out.println("bye bye!");

@@ -7,7 +7,7 @@
      */
     public class StringUtils {
 
-        public static String getmonthName(int monthNumber){
+        public static String getMonthName(int monthNumber){
             String month = "";
 
             switch (monthNumber) {
