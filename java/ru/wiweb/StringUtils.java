@@ -2,6 +2,7 @@ package ru.wiweb;
 
 /**
  * Строковые утилиты
+ * Тестовые задания здесь же
  */
 public class StringUtils {
 
