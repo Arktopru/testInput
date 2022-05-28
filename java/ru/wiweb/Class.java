@@ -31,6 +31,18 @@ public class Class {
                     mint = Integer.parseInt(input);
                 }
                 System.out.println("input : " + StringUtils.getMonthName(mint));
+                if (mint == 12){
+                    System.out.println("С новым годом!");
+                }
+                if (mint == 7){
+                    System.out.println("С днем рождения!");
+                }
+                if (mint == 9){
+                    System.out.println("______________________________________________________________");
+                    System.out.println("С днем рождения мама и папа!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                    System.out.println("______________________________________________________________");
+                }
+
             }
 
             System.out.println("bye bye!");

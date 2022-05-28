@@ -50,10 +50,10 @@
                 default:
                     month = "не определенно!";
                     break;
-
             }
             return month;
         }
+
     }
 
 
