@@ -18,33 +18,30 @@ public class Class {
 
         try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
             String input = "";
+            int first = 0;
+            int second = 0;
 
             while (!"q".equalsIgnoreCase(input)) {
-                System.out.print("Укажите номер месяца (q to quite): ");
+                System.out.print("Укажите первый операнд (q to quite): ");
                 input = br.readLine();
-                int mint = 0;
 
                 if (!input.isEmpty()) {
-                    mint = Integer.parseInt(input);
-                }
-                System.out.println("input : " + StringUtils.getMonthName(mint));
-
-                switch (mint){
-                    case 7:
-                        System.out.println("С днем рождения!");
-                        break;
-                    case 9:
-                        System.out.println("______________________________________________________________");
-                        System.out.println("С днем рождения мама и папа!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-                        System.out.println("______________________________________________________________");
-                        break;
-                    case 12:
-                        System.out.println("С новым годом!");
-                        break;
-                    default:
+                    first = Integer.parseInt(input);
+                    break;
                 }
             }
-            System.out.println("bye bye!");
+
+
+            while (!"q".equalsIgnoreCase(input)) {
+                System.out.print("Укажите второй операнд (q to quite): ");
+                input = br.readLine();
+
+                if (!input.isEmpty()) {
+                    second = Integer.parseInt(input);
+                    break;
+                }
+            }
+            System.out.println("Сумма " + first + " + " + second + " = " + (first + second));
         } catch (Exception e) {
             e.printStackTrace();
         }
