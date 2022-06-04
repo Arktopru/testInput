@@ -90,6 +90,25 @@ public class StringUtils {
         }
         return dayOfWeek;
     }
+    public static void getOperation (String op, double first, double second){
+        switch (op) {
+            case "+":
+                System.out.println("Сумма " + first + " + " + second + " = " + (first + second));
+                break;
+            case "*":
+                System.out.println("Произведение " + first + " * " + second + " = " + (first * second));
+                break;
+            case "-":
+                System.out.println("Вычитание " + first + " - " + second + " = " + (first - second));
+                break;
+            case "/":
+                System.out.println("Деление " + first + " / " + second + " = " + (first / second));
+                break;
+            default:
+                System.out.println("Не известная операция");
+                break;
+        }
+    }
 
 }
 
