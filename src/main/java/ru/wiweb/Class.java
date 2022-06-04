@@ -17,29 +17,21 @@ public class Class {
     public static void main(String[] args) {
 
         try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
-            String input = "";
             int first = 0;
             int second = 0;
+            System.out.print("Укажите первый операнд (q to quite): ");
 
-            while (!"q".equalsIgnoreCase(input)) {
-                System.out.print("Укажите первый операнд (q to quite): ");
-                input = br.readLine();
-
-                if (!input.isEmpty()) {
-                    first = Integer.parseInt(input);
-                    break;
-                }
+            try {
+                first = getInputFromSystemInput(br);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
+            System.out.print("Укажите второй операнд (q to quite): ");
 
-
-            while (!"q".equalsIgnoreCase(input)) {
-                System.out.print("Укажите второй операнд (q to quite): ");
-                input = br.readLine();
-
-                if (!input.isEmpty()) {
-                    second = Integer.parseInt(input);
-                    break;
-                }
+            try {
+                second = getInputFromSystemInput(br);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
             System.out.println("Сумма " + first + " + " + second + " = " + (first + second));
         } catch (Exception e) {
@@ -47,5 +39,18 @@ public class Class {
         }
     }
 
+    private static int getInputFromSystemInput(BufferedReader br) throws IOException {
+        String input = "";
 
+        while (!"q".equalsIgnoreCase(input)) {
+
+            input = br.readLine();
+
+            if (!input.isEmpty()) {
+                return Integer.parseInt(input);
+
+            }
+        }
+        return 0;
+    }
 }
