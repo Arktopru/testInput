@@ -7,56 +7,37 @@ package ru.wiweb;
  */
 public class StringUtils {
 
+    private static String[] months = new String[]{
+            "январь",//0
+            "февраль", //1
+            "март",//2
+            "апрель", //3
+            "май", //4
+            "июнь", //5
+            "июль", //6
+            "август", //7
+            "сентябрь", //8
+            "октябрь", //9
+            "ноябрь", //10
+            "декабрь" //11
+    };
+
+    private static String[] weekDays = new String[]{
+            "понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"
+    };
+
     /**
      * получить название месяца по его номеру
+     *
      * @param monthNumber номер месяца
      * @return возвращает название месяца
      */
     public static String getMonthName(int monthNumber) {
-        String month = "";
 
-        switch (monthNumber) {
-            case 1:
-                month = "январь";
-                break;
-            case 2:
-                month = "февраль";
-                break;
-            case 3:
-                month = "март";
-                break;
-            case 4:
-                month = "апрель";
-                break;
-            case 5:
-                month = "май";
-                break;
-            case 6:
-                month = "июнь";
-                break;
-            case 7:
-                month = "июль";
-                break;
-            case 8:
-                month = "август";
-                break;
-            case 9:
-                month = "сентябрь";
-                break;
-            case 10:
-                month = "октябрь";
-                break;
-            case 11:
-                month = "ноябрь";
-                break;
-            case 12:
-                month = "декабрь";
-                break;
-            default:
-                month = "не определенно!";
-                break;
+        if (monthNumber >= 1 && monthNumber <= 12) {
+            return months[monthNumber - 1];
         }
-        return month;
+        return "Неопределенно";
     }
 
     /**
@@ -65,44 +46,22 @@ public class StringUtils {
      * @param weekDayNumber номер дня недели
      * @return
      */
-    public static String getWeekDayName(int weekDayNumber){
-        String dayOfWeek = "";
+    public static String getWeekDayName(int weekDayNumber) {
 
-        switch (weekDayNumber) {
-            case 1:
-                dayOfWeek = "понедельник";
-                break;
-            case 2:
-                dayOfWeek = "вторник";
-                break;
-            case 3:
-                dayOfWeek = "среда";
-                break;
-            case 4:
-                dayOfWeek = "четверг";
-                break;
-            case 5:
-                dayOfWeek = "пятница";
-                break;
-            case 6:
-                dayOfWeek = "суббота";
-                break;
-            case 7:
-                dayOfWeek = "воскресенье";
-                break;
-            default:
-                dayOfWeek = "не определенно!";
+        if(weekDayNumber >= 1 && weekDayNumber <= 7) {
+            return weekDays[weekDayNumber - 1];
         }
-        return dayOfWeek;
+        return "Неопределенно";
     }
 
     /**
      * Этот метод анализирует операнд и выводит результат на печать
-     * @param op действия калькулятора
-     * @param first первый операнд
+     *
+     * @param op     действия калькулятора
+     * @param first  первый операнд
      * @param second второй операнд
      */
-    public static void getOperation (String op, double first, double second){
+    public static void getOperation(String op, double first, double second) {
 
         switch (op) {
             case "+":
