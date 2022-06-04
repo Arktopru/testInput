@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 public class Class {
 
     /**
-     * Это главный метод приложения 22222
+     * Это главный метод приложения
      *
      * @param args входные параметры приложения
      */
