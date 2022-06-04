@@ -10,11 +10,11 @@ import java.io.InputStreamReader;
 public class Class {
 
     /**
+     * Это главный метод приложения
      *
-     *
-     * @param args
+     * @param args входные параметры приложения
      */
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
         try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
             String input = "";
@@ -45,7 +45,7 @@ public class Class {
                 }
             }
             System.out.println("bye bye!");
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
