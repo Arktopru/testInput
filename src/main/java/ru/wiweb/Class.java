@@ -54,7 +54,7 @@ public class Class {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                StringUtils.getOperation(op, first, second);
+                System.out.println(StringUtils.getOperation(op, first, second));
                 System.out.print("Что бы выйти нажмите q, для продолжения введите любой символ, кроме q: ");
 
                 try {
@@ -65,7 +65,6 @@ public class Class {
 
                 if (input.equals("q")) {
                     break;
-
                 }
             }
         } catch (Exception e) {
@@ -82,7 +81,6 @@ public class Class {
 
             if (!input.isEmpty()) {
                 return Double.parseDouble(input);
-
             }
         }
     }
@@ -96,7 +94,6 @@ public class Class {
 
             if (!input.isEmpty()) {
                 return input;
-
             }
         }
     }

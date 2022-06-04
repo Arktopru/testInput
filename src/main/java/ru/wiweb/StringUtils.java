@@ -61,24 +61,19 @@ public class StringUtils {
      * @param first  первый операнд
      * @param second второй операнд
      */
-    public static void getOperation(String op, double first, double second) {
+    public static String getOperation(String op, double first, double second) {
 
         switch (op) {
             case "+":
-                System.out.println("Сумма " + first + " + " + second + " = " + (first + second));
-                break;
+                return "Сумма " + first + " + " + second + " = " + (first + second);
             case "*":
-                System.out.println("Произведение " + first + " * " + second + " = " + (first * second));
-                break;
+                return "Произведение " + first + " * " + second + " = " + (first * second);
             case "-":
-                System.out.println("Вычитание " + first + " - " + second + " = " + (first - second));
-                break;
+                return "Вычитание " + first + " - " + second + " = " + (first - second);
             case "/":
-                System.out.println("Деление " + first + " / " + second + " = " + (first / second));
-                break;
+                return "Деление " + first + " / " + second + " = " + (first / second);
             default:
-                System.out.println("Не известная операция");
-                break;
+                return "Не известная операция";
         }
     }
 
