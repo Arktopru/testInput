@@ -7,6 +7,11 @@ package ru.wiweb;
  */
 public class StringUtils {
 
+    /**
+     * получить название месяца по его номеру
+     * @param monthNumber номер месяца
+     * @return возвращает название месяца
+     */
     public static String getMonthName(int monthNumber) {
         String month = "";
 
@@ -90,7 +95,15 @@ public class StringUtils {
         }
         return dayOfWeek;
     }
+
+    /**
+     * Этот метод анализирует операнд и выводит результат на печать
+     * @param op действия калькулятора
+     * @param first первый операнд
+     * @param second второй операнд
+     */
     public static void getOperation (String op, double first, double second){
+
         switch (op) {
             case "+":
                 System.out.println("Сумма " + first + " + " + second + " = " + (first + second));

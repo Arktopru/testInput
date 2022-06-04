@@ -3,7 +3,6 @@ package ru.wiweb;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.sql.SQLOutput;
 
 /**
  *
@@ -75,7 +74,7 @@ public class Class {
     }
 
     private static double getInputFromSystemInput(BufferedReader br) throws IOException {
-        String input = "";
+        String input;
 
         while (true) {
 
@@ -89,7 +88,7 @@ public class Class {
     }
 
     private static String getInputString(BufferedReader br) throws IOException {
-        String input = "";
+        String input;
 
         while (true) {
 
